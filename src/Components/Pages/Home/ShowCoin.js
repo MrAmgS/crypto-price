@@ -12,8 +12,8 @@ const ShowCoin = ({coins , isSearch}) => {
             <div>
                 <div className={styles.container}>
             { coins.map((coin) => (
-                  <Link to='/coins' >
-                    <div key={coin.item.id} className={styles.coin}>
+                  <Link to='/coins' key={coin.item.id} >
+                    <div className={styles.coin}>
                       <img src={coin.item.large} alt="coin" />
                       <h2>{coin.item.name}</h2>
                       <h3>{coin.item.symbol}</h3>
@@ -28,8 +28,8 @@ const ShowCoin = ({coins , isSearch}) => {
         return (
             <div className={styles.container}>
             {coins.map((coin) => (
-                <Link to='/coins' >
-                  <div key={coin.id} className={styles.coin}>
+                <Link to='/coins' key={coin.id} >
+                  <div className={styles.coin}>
                     <img src={coin.large} alt="coin" />
                     <h2>{coin.name}</h2>
                     <h3>{coin.symbol}</h3>
