@@ -29,3 +29,11 @@ export const SearchedAPI = async (searchedCoin) => {
   
     return data;
   };
+
+
+  export const CoinDetailsAPI = async (id) => {
+    const result = await axios.get(
+      `https://api.coingecko.com/api/v3/coins/${id}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false`
+    );
+    return result.data;
+  };
