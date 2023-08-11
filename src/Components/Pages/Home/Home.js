@@ -12,6 +12,7 @@ import ShowCoin from "./ShowCoin";
 
 const Home = () => {
   const [coins, setCoins] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [isSearch, setIsSearch] = useState(false);
   const [searchCoin, setSearchCoin] = useState("");
   const [searchResult, setSearchResult] = useState([]);
@@ -21,6 +22,7 @@ const Home = () => {
       setCoins(await HomeAPI());
     };
 
+    setIsLoaded(true);
     fetchAPI();
   }, []);
 
@@ -56,7 +58,12 @@ const Home = () => {
           <img src={searchIcon} alt="icon" />
         </button>
       </div>
-      {!isSearch ? (
+      {!isLoaded ? (
+        <div className={styles.loading}>
+          <div className={styles.spinner}> </div>
+          Loading ...
+        </div>
+      ) : !isSearch ? (
         <ShowCoin coins={coins} isSearch={isSearch} />
       ) : (
         <ShowCoin coins={searchResult} isSearch={isSearch} />
