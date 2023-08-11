@@ -22,7 +22,7 @@
 .details {
   display: flex;
   justify-content: space-between;
-  width: 61%;
+  width: 80vw;
   margin-bottom: 40px;
   transition: all 0.8s ease-in;
 }
@@ -70,7 +70,7 @@
 }
 
 .moreDescription {
-  width: 58%;
+  width: 80vw;
   background-color: rgb(240, 248, 255);
   box-shadow: 20px 20px 60px #b88402, -20px -20px 60px #ffea04;
   padding: 30px;
