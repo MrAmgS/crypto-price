@@ -1,0 +1,28 @@
+.search {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+  }
+  .search button {
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    margin: 0 5px;
+  }
+  .search img {
+    width: 30px;
+    height: 30px;
+  }
+  .search input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .search input::placeholder {
+    color: #2a2929;
+    font-size: 1rem;
+    font-weight: 600;
+  }

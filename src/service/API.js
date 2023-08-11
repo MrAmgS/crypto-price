@@ -6,3 +6,11 @@ export const HomeAPI = async () => {
   );
   return result.data.coins;
 };
+
+export const SearchedAPI = async (searchedCoin) => {
+    const result = await axios.get(
+      `https://api.coingecko.com/api/v3/search?query=${searchedCoin}`
+    );
+    return result.data.coins;
+  };
+  
