@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import {
-  AreaChart,
-  Area,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-} from "recharts";
+
+//Chart
+import { Chart as ChartJS } from "chart.js/auto";
+import BarChart from "./BarChart";
 
 //API
 import { ChartAPI, CoinDetailsAPI } from "../../../service/API";
@@ -20,13 +16,13 @@ import homeIcon from '../../../assets/home.png'
 
 const CoinDetails = () => {
   const params = useParams();
-  const [chartData, setChartData] = useState([]);
+  const [data ,setData] = useState ([]);
   const [detail, setDetail] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const getChartsData = async () => {
-      setChartData(await ChartAPI(params.id));
+      setData(await ChartAPI(params.id));
     };
     getChartsData();
 
@@ -36,6 +32,21 @@ const CoinDetails = () => {
     };
     fetchAPI();
   }, []);
+
+  const chartData = {
+    labels: data.map( item => item.data),
+    datasets: [
+      {
+        label: "coin price",
+        data: data.map( item => item.price),
+        backgroundColor: "#1a3749",
+        borderWidth: 1,
+        hoverBackgroundColor: "rgba(232,105,90,0.8)",
+        hoverBorderColor: "orange",
+        scaleStepWidth: 1,
+      },
+    ],
+  };
 
   return (
     <>
@@ -58,31 +69,7 @@ const CoinDetails = () => {
           </div>
         )}
         <div className={styles.chart}>
-          <AreaChart
-            width={700}
-            height={400}
-            data={chartData}
-            margin={{
-              top: 10,
-              right: 30,
-              left: 20,
-              bottom: 0,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="data" />
-            <YAxis
-              type="number"
-              domain={[(dataMin) => dataMin * 0.8, (dataMax) => dataMax * 1.1]}
-            />
-            <Tooltip />
-            <Area
-              type="monotone"
-              dataKey="price"
-              stroke="#000"
-              fill="#219EBC"
-            />
-          </AreaChart>
+            <BarChart chartData={chartData} />
         </div>
         {!isLoaded ? (
           ""
