@@ -22,60 +22,70 @@
 .details {
   display: flex;
   justify-content: space-between;
-  width: 80vw;
-  margin-bottom: 40px;
-  transition: all 0.8s ease-in;
+  width: 80%;
+  margin-bottom: 60px;
 }
 
 .chart {
-  display: flex;
-  margin-bottom: 40px;
-  background-color: rgb(240, 248, 255, 0.99);
+  width: 75%;
+  height: 75%;
+  margin-bottom: 80px;
+  background-color: #ebe3e0;
   border-radius: 40px;
-  padding: 40px;
-  box-shadow: 20px 20px 60px #b88402, -20px -20px 60px #ffea04;
+  padding: 40px 30px 90px 30px;
+  box-shadow: 20px 20px 60px #b88402, -20px -20px 60px #e2d004;
+  transition: all 0.3s;
 }
 
 .nameImage {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aliceblue;
+  background-color: #ebe3e0;
   padding: 0 20px;
   border-radius: 30px;
   height: 100px;
-  box-shadow: 20px 20px 60px #b88402, -20px -20px 60px #ffea04;
+  box-shadow: 20px 20px 60px #b88402, -20px -20px 60px #e2d004;
+  z-index: 10;
+  color: #1a3749;
+  transition: all 0.3s linear;
 }
 
 .nameImage img {
   width: 50px;
   border-radius: 50%;
+  transition: all 0.3s linear;
 }
 .nameImage h2 {
   margin: 0 20px;
+  transition: all 0.3s linear;
 }
 
 .price {
   display: flex;
+  height: 100px;
   font-size: 2rem;
   font-family: "Preahvihear", sans-serif;
   font-weight: 600;
-  background-color: aliceblue;
+  background-color: #ebe3e0;
+  color: #1a3749;
   justify-content: center;
   align-items: center;
   padding: 0 20px;
   border-radius: 30px;
-  height: 100px;
-  box-shadow: 20px 20px 60px #b88402, -20px -20px 60px #ffea04;
+  box-shadow: 20px 20px 60px #b88402, -20px -20px 60px #e2d004;
+  transition: all 0.3s linear;
+  z-index: 11;
 }
 
 .moreDescription {
-  width: 80vw;
-  background-color: rgb(240, 248, 255);
-  box-shadow: 20px 20px 60px #b88402, -20px -20px 60px #ffea04;
+  width: 75%;
+  background-color: #ebe3e0;
+  box-shadow: 20px 20px 30px #b88402, -20px -20px 30px #e2d004;
   padding: 30px;
   border-radius: 20px;
-  transition: all 0.8s ease-in;
+  color: #1a3749;
+  transition: all 0.3s linear;
 }
 
 .green {
@@ -91,6 +101,8 @@
   font-size: 2rem;
   font-family: "Oswald", sans-serif;
   margin-bottom: 20px;
+  transition: all 0.3s linear;
+
 }
 .lowHigh {
   display: flex;
@@ -98,7 +110,9 @@
   font-family: "Oswald", sans-serif;
   font-size: 1.5rem;
   margin-bottom: 20px;
+  transition: all 0.3s linear;
 }
+
 .lowHigh :nth-child(2) {
   margin-left: 60px;
 }
@@ -107,6 +121,7 @@
   font-size: 1.7rem;
   margin-bottom: 20px;
   font-family: "Oswald", sans-serif;
+  transition: all 0.3s linear;
 }
 
 .moreDescription p {
@@ -159,12 +174,91 @@
     }
  }
 
-
-  @media (max-width: 1440px) {
-    .moreDescription {
-        width: 80%;
-    }
-    .details {
-        width: 80%;
-    }
+ @media (max-width: 1220px) {
+  .price {
+    font-size: 1.6rem;
+    height: 80px;
   }
+  .nameImage {
+    font-size: 1.6rem;
+    height: 80px;
+  }
+  .nameImage img {
+    width: 40px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .price {
+    font-size: 1.3rem;
+  }
+  .nameImage h2 {
+    font-size: 1.5rem;
+  }
+  .nameImage img {
+    width: 40px;
+  }
+  .lowHigh {
+    font-size: 1.3rem;
+  }
+  .marketCap {
+    font-size: 1.3rem;
+  }
+  .moreDescription p {
+    font-size: 1.2rem;
+  }
+  .red,
+  .green {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 880px) {
+  .price {
+    font-size: 1rem;
+  }
+  .nameImage h2 {
+    font-size: 1.4rem;
+  }
+  .nameImage img {
+    width: 35px;
+  }
+  .lowHigh {
+    font-size: 1.2rem;
+  }
+  .marketCap {
+    font-size: 1.2rem;
+  }
+  .moreDescription p {
+    font-size: 1.1rem;
+  }
+  .red,
+  .green {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .price {
+    font-size: 1rem;
+  }
+  .nameImage h2 {
+    font-size: 1.2rem;
+  }
+  .nameImage img {
+    width: 33px;
+  }
+  .lowHigh {
+    font-size: 1rem;
+  }
+  .marketCap {
+    font-size: 1rem;
+  }
+  .moreDescription p {
+    font-size: 0.9rem;
+  }
+  .red,
+  .green {
+    font-size: 1.3rem;
+  }
+}
