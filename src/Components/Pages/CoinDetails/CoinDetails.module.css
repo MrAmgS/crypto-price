@@ -211,6 +211,9 @@
   .green {
     font-size: 1.7rem;
   }
+  .chart {
+    margin-bottom: 60px;
+  }
 }
 
 @media (max-width: 880px) {
@@ -235,6 +238,9 @@
   .red,
   .green {
     font-size: 1.5rem;
+  }
+  .chart {
+    margin-bottom: 40px;
   }
 }
 
