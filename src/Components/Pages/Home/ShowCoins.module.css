@@ -102,3 +102,34 @@ body {
     margin-bottom: 40px;
   }
 }
+
+@media (max-width: 590px) {
+  
+  .trending h2 {
+    font-size: 1.3rem;
+  }
+  .coin h2,
+  .coin h3 {
+    font-size: 0.7rem;
+  }
+
+  .coin p {
+    font-size: 0.6rem;
+  }
+
+  .coin img {
+    width: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .trending h2 {
+    font-size: 1.3rem;
+  }
+  
+  .coin {
+    margin: 20px ;
+    grid-template-columns: 1fr 2.5fr 2fr 1fr;
+  }
+}

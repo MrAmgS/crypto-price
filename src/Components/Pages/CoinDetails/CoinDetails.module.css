@@ -268,3 +268,61 @@
     font-size: 1.3rem;
   }
 }
+
+@media (max-width: 678px) {
+  .price {
+    font-size: 0.6rem;
+    height: 60px;
+  }
+  .nameImage {
+    height: 60px;
+  }
+  .nameImage h2 {
+    font-size: 0.8rem;
+  }
+  .nameImage img {
+    width: 27px;
+  }
+  .chart {
+    margin-bottom: 40px;
+    height: 170px;
+  }
+  .lowHigh {
+    font-size: 0.9rem;
+  }
+  .marketCap {
+    font-size: 0.9rem;
+  }
+  .moreDescription p {
+    font-size: 0.7rem;
+  }
+  .red,
+  .green {
+    font-size: 1.1rem;
+  }
+  .homeLink {
+    width: 40px;
+    height: 40px;
+  }
+  .homeLink img {
+    width: 20px;
+    margin: 10px;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .details {
+    width: 80vw;
+    margin: 10 auto;
+    margin-bottom: 30px;
+  }
+
+  .chart {
+    width: 70vw;
+  }
+  .moreDescription {
+    width: 70vw;
+  }
+}
+

@@ -20,6 +20,7 @@
     border-radius: 10px;
     font-size: 1rem;
     font-weight: 600;
+    transition: all 0.3s ease-in;
   }
   .search input::placeholder {
     color: #2a2929;
@@ -53,4 +54,21 @@
     to {
        transform: rotate(360deg);
     }
+ }
+
+ @media (max-width: 768px) {
+  .search input {
+    width: 200px;
+  }
+ }
+
+ @media (max-width: 590px) {
+  .search input {
+    width: 200px;
+    height: 15px;
+  }
+  .search button {
+    width: 37px;
+    height: 37px;
+  }
  }
